@@ -17,8 +17,8 @@ public class Project04 {
         String sentence = ScannerHelper.getString();
 
         if (sentence.contains(" "))
-            System.out.println(sentence.substring(sentence.lastIndexOf(" ")).concat(" ").concat(sentence
-                    .substring(sentence.indexOf(" "), sentence.lastIndexOf(" "))).concat(sentence.substring(0, sentence.indexOf(" "))));
+            System.out.println(sentence.substring(sentence.lastIndexOf(" ") + 1).concat(sentence
+                    .substring(sentence.indexOf(" "), sentence.lastIndexOf(" "))).concat(" ").concat(sentence.substring(0, sentence.indexOf(" "))));
         else System.out.println("This sentence does not have 2 or more words to swap");
 
         System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-TASK3=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
@@ -53,13 +53,15 @@ public class Project04 {
                     .replace("u", "$").replace("o", "@").replace("A", "*")
                     .replace("E", "#").replace("I", "+")
                     .replace("U", "$").replace("O", "@"));
+        else System.out.println(address);
 
         System.out.println("-=-=-=-=-=-=-=-=-=-=-=-=-=-TASK7=-=-=-=-=-=-=-=-=-=-=-=-=-=-=");
 
         String nrOfWords = ScannerHelper.getString();
         String noSpaces = nrOfWords.replace(" ", "");
 
-        if (nrOfWords.contains(" ")) System.out.println(nrOfWords.length() - noSpaces.length() + 1);
+        if (nrOfWords.contains(" ")) System.out.println("The number of words is " + (nrOfWords.length() - noSpaces.length() + 1));
+        else System.out.println("The string has only one word");
 
     }
 }
