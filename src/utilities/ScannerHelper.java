@@ -6,6 +6,10 @@ public class ScannerHelper {
     static Scanner input = new Scanner(System.in);
 
     // Write a method that ask and return a first name from user
+    public static String getName(){
+        System.out.println("Please enter name first and last name.");
+        return input.nextLine();
+    }
     public static String getFirstName() {
         System.out.println("Please enter your first name.");
         return input.nextLine();
