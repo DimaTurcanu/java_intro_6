@@ -20,9 +20,11 @@ public class Homework05 {
 
         System.out.println("\n--------------------TASK-3----------------------\n");
 
+        String solution = "";
         for (int i = 100; i >= 50; i--) {
-            if (i % 5 == 0) System.out.print(i + " - ");
+            if (i % 5 == 0) solution += i + " - ";
         }
+        System.out.println(solution.substring(0,solution.length()-3));
 
         System.out.println("\n--------------------TASK-4----------------------\n");
 

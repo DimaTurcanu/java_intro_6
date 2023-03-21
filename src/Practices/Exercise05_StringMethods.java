@@ -12,5 +12,6 @@ public class Exercise05_StringMethods {
         else System.out.println(str1.substring(1, str1.length() - 1) + str2.substring(1, str2.length() - 1));
 
         System.out.println(Math.min(str1.length() , str2.length()));
+
     }
 }
