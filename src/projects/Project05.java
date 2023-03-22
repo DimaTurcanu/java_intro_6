@@ -31,9 +31,9 @@ public class Project05 {
         int words = 1;
 
          for (int i = 0; i < str.length(); i++) {
-             if (str.charAt(i) == ' ') words++;
+             if (str.trim().charAt(i) == ' ') words++;
          }
-             if (str.contains(" ")) System.out.println("This sentence has " + words + " words.");
+             if (str.trim().contains(" ")) System.out.println("This sentence has " + words + " words.");
              else {
                  System.out.println("This sentence does not have multiple words");
              }
@@ -87,7 +87,7 @@ public class Project05 {
 * * * * * * * * * * * * * * * * * //0
          */
 
-        int rows = 8;
+        int rows = 9;
 
         for (int i = 1; i <= rows; i++) {
             for (int j = 1; j <= rows - i; j++) {
