@@ -146,7 +146,6 @@ public class Homework06 {
          */
 
         String[] cartoonCats = {"Garfield", "Tom", "Sylvester", "Azrael"};
-
         Arrays.sort(cartoonCats);
         System.out.println(Arrays.toString(cartoonCats));
         boolean first = false;
@@ -207,21 +206,23 @@ public class Homework06 {
         char[] chars = {'A', 'b', 'G', 'H', '7', '5', '&', '*', 'e', '@', '4'};
 
         System.out.println(Arrays.toString(chars));
-        System.out.println("Letters = " + chars.length);
 
 
+        int letters = 0;
         int lCase = 0;
         int upCase = 0;
         int digits = 0;
         int specialC = 0;
 
         for (char aChar : chars) {
+            if (Character.isLetter(aChar)) letters++;
             if (Character.isLowerCase(aChar)) lCase++;
             if (Character.isUpperCase(aChar)) upCase++;
             if (Character.isDigit(aChar)) digits++;
-            else specialC++;
+            if (!Character.isLetterOrDigit(aChar)) specialC++;
 
         }
+        System.out.println("Letters = " + letters);
         System.out.println("Uppercase letters = " + upCase);
         System.out.println("Lowercase letters = " + lCase);
         System.out.println("Digits = " +digits);

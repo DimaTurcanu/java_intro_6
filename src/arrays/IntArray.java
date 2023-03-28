@@ -41,6 +41,8 @@ public class IntArray {
                 System.out.println(number);
             }
 
+
         }
+
     }
 }

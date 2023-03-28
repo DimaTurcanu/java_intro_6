@@ -56,5 +56,6 @@ public class Exercise01_CountNumbers {
         }
 
         System.out.println(sum);
+        System.out.println(Math.max(numbers[0], numbers[3]));
     }
 }
