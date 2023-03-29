@@ -22,7 +22,7 @@ public class Project06 {
 
         System.out.println("\n==============TASK5===============\n");
 
-        findDuplicatedElementsInAnArray(new String[] {"foo", "bar", "Foo", "bar", "6", "abc", "6", "xyz"});
+        findDuplicatedElementsInAnArray(new String[] {"foo", "bar", "Foo", "bar", "6", "bar", "6", "xyz"});
 
         System.out.println("\n==============TASK6===============\n");
 
@@ -40,18 +40,21 @@ public class Project06 {
 
 
 
-        int smallest = array[0];
-        int largest = 0;
+        int smallest = Integer.MAX_VALUE;
+        int largest = Integer.MIN_VALUE;
 
         for (int i : array) {
             if (i < smallest) smallest = i;
-            if (i > largest) largest = i;
+           else if (i > largest) largest = i;
         }
         System.out.println("Smallest = " + smallest);
         System.out.println("Greatest = " + largest);
     }
     public static void  findSecondGreatestAndSmallestWithSort(int [] array) {
         Arrays.sort(array);
+        if (array.length == 0) System.out.println("Array is empty");
+        else if (array.length == 1) System.out.println("Array has only 1 number");
+
         System.out.println(Arrays.toString(array));
 
         int secondSmallest = array[0];
@@ -75,8 +78,8 @@ public class Project06 {
                 System.out.println("Second Greatest = " + secondGreatest);
         }
         public static void findSecondGreatestAndSmallest(int [] array) {
-                int smallest = array[0];
-                int greatest = array[0];
+                int smallest = Integer.MAX_VALUE;
+                int greatest = Integer.MIN_VALUE;
 
                 for (int i = 1; i < array.length; i++) {
                     if (array[i] < smallest) {
@@ -90,10 +93,10 @@ public class Project06 {
 
                 // Find the second smallest and second-greatest elements in the array
             for (int j : array) {
-                if (j > smallest && j < secondSmallest) {
+                if (j > smallest && j != secondSmallest) {
                     secondSmallest = j;
                 }
-                if (j < greatest && j > secondGreatest) {
+                if (j < greatest && j != secondGreatest) {
                     secondGreatest = j;
                 }
             }
