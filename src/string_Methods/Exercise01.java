@@ -12,6 +12,7 @@ public class Exercise01 {
             System.out.println("These strings are equal");
         } else {
             System.out.println("These strings are not equal");
+            System.out.println(str2.split(" ").length);
         }
     }
 }

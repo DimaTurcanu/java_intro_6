@@ -5,11 +5,11 @@ import utilities.ScannerHelper;
 public class Homework05 {
     public static void main(String[] args) {
         System.out.println("\n--------------------TASK-1----------------------\n");
-
+        String str = "";
         for (int i = 1; i <= 100; i++) {
-            if (i % 7 == 0) System.out.print(i + " - ");
-
+            if (i % 7 == 0) str += i + " - ";
     }
+        System.out.println(str.substring(0, str.length()-3));
 
         System.out.println("\n--------------------TASK-2----------------------\n");
 
@@ -46,7 +46,7 @@ public class Homework05 {
         int userNumber = ScannerHelper.getNumber();
         int factorial = 1;
         for (int i = 1; i <= userNumber; i++) {
-            factorial = factorial * i;
+            factorial *= i;
         }
         System.out.println(factorial);
 

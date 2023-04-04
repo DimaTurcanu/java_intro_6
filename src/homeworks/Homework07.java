@@ -77,13 +77,15 @@ public class Homework07 {
         Collections.sort(objects);
         System.out.println(objects);
 
-        int containsM = 0, AorE = 0;
+        int containsM = 0;
 
         for (String element : objects) {
             if (element.toLowerCase().startsWith("m")) containsM++;
         }
         System.out.println(containsM);
         System.out.println(objects.stream().filter((x -> !x.toLowerCase().contains("a") && !x.toLowerCase().contains("e"))).count());
+
+
 
 
         System.out.println("\n=-=-=-=-=-=-=-=-=-Task9=-=-=-=-=-=-=-=-=-=-=-\n");
@@ -104,11 +106,9 @@ public class Homework07 {
 
         System.out.println(numbers);
         System.out.println("Elements that can be divided by 10 = " + numbers.stream().filter(x -> x % 10 == 0).count());
-        System.out.println("Elements that are even and greater than 15 = " + numbers.stream().filter(x-> x >= 15).count());
+        System.out.println("Elements that are even and greater than 15 = " + numbers.stream().filter(x-> x >= 15 && x % 2 == 0).count());
         System.out.println("Elements that are odd and less than 20 = " + numbers.stream().filter(x->x % 2 == 1 && x <20).count());
         System.out.println("Elements that are less than 15 or greater than 50 = " + numbers.stream().filter(x -> x<15 || x>50).count());
-
-
 
     }
 }
