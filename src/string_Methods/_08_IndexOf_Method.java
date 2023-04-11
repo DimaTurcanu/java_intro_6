@@ -9,7 +9,7 @@ public class _08_IndexOf_Method {
     4. takes either a string or a char as an argument
      */
 
-        String str = "TechGlobal";
+        String str = "Tezhplobal";
         //IndexOf()
         System.out.println(str.indexOf('h'));//3
 
@@ -24,6 +24,14 @@ public class _08_IndexOf_Method {
 
         //lastIndexOf()
         System.out.println(str.lastIndexOf('l'));//9
+        System.out.println(str.substring(3, 4));
+
+
+        for (int i = 0; i<str.length()-3; i++){
+            if (str.charAt(i) == 'z' && str.charAt(i+2) == 'p')
+                System.out.println(str.replace("" + str.charAt(i + 1), ""));
+        }
 
     }
+
 }

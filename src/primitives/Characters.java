@@ -1,7 +1,5 @@
 package primitives;
 
-import java.sql.SQLOutput;
-
 public class Characters {
     public static void main(String[] args) {
         /*
@@ -14,6 +12,7 @@ public class Characters {
 
         char c1 = 'A';
         char c2 = ' ';
+
 
         System.out.println(c1); //A
         System.out.println(c2); //(space)

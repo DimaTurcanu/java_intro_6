@@ -2,9 +2,9 @@ package mock02;
 
 public class Practice05_Task06 {
     public static void main(String[] args) {
-        String str = "baNana";
+        String str = "1cat1cadodog";
         String s = "";
-
+        int count = 0;
 
         for (int i = 0; i < str.length(); i++) {
             for (int j = i + 1; j < str.length(); j++)
@@ -12,10 +12,18 @@ public class Practice05_Task06 {
                     s += str.charAt(i);
 
         }
-        for (char c : s.toCharArray()) {
-            System.out.println(c);
 
+        String str1 = "abc.xyzxy";
+
+        boolean xyz = false;
+        for (int i= 0; i<str.length()-4; i++){
+            if (str1.charAt(i) != '.' && str1.startsWith("xyz", i+1)){
+                xyz = true;
+                break;
+            }
         }
+        System.out.println(xyz);;
+
 
     }
 }
