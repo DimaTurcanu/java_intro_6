@@ -11,7 +11,7 @@ public class Project08 {
         System.out.println(findClosestDistance(new int[]{4, 8, 7, 15}));
         System.out.println(findClosestDistance(new int[]{10, -5, 20, 50, 100}));
         System.out.println("\n============TASK2==============\n");
-        System.out.println(findSingleNumber(new int[]{5, 3, -1, 3, 5, 4, 6, 6, 6, 8 , 9 , 8, 9, -1}));
+        System.out.println(findSingleNumber(new int[]{5, 3, -1, 3, 5, 6, 6, 7, 8 , 9 , 8, 9, -1}));
         System.out.println(findSingleNumber(new int[]{2}));
         System.out.println("\n============TASK3==============\n");
         System.out.println(findFirstUniqueCharacter("Hello"));
@@ -24,8 +24,9 @@ public class Project08 {
     }
 
     public static int  findClosestDistance(int [] arr){
-        sort(arr);
         if (arr.length<2) return -1;
+
+        sort(arr);
         int minAbs = Integer.MAX_VALUE;
         for (int i = 0; i < arr.length -1; i++) {
             int abs = (arr[i+1] - arr[(i)]);
@@ -33,6 +34,7 @@ public class Project08 {
         }return minAbs;
     }
     public static int  findSingleNumber(int [] arr) {
+        if (arr.length<2) return arr[0];
         Arrays.sort(arr);
         int single = 0;
         int count = 0;
@@ -42,14 +44,11 @@ public class Project08 {
             } else {
                 if (count == 0) {
                     single = arr[i - 1];
-                    break;
                 }
                 count = 0;
             }
         }
-        if (count == 0 && single == 0) {
-            single = arr[arr.length - 1];
-        }
+
         return single;
     }
     public static char findFirstUniqueCharacter(String str){
