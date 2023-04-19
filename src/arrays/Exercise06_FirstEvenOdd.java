@@ -1,5 +1,7 @@
 package arrays;
 
+import java.util.Arrays;
+
 public class Exercise06_FirstEvenOdd {
     public static void main(String[] args) {
 
@@ -19,7 +21,10 @@ public class Exercise06_FirstEvenOdd {
                 System.out.println(number);
                 break;
             }
+
         }
+        System.out.println(Arrays.stream(numbers).filter(e -> e % 2 == 0).count());
+
         System.out.println("\n-------Using one loop-------\n");
 
         boolean isEvenFound = false; // true

@@ -12,8 +12,8 @@ public class Homework08 {
     public static void main(String[] args) {
         System.out.println("\n============TASK1===============\n");
 
-        System.out.println(countConsonants("hello"));
-        System.out.println(countConsonants("JAVA"));
+
+        System.out.println(countConsonants("JAVA43%#&^%$#@"));
         System.out.println(countConsonants(""));
 
         System.out.println("\n============TASK2===============\n");
@@ -22,7 +22,7 @@ public class Homework08 {
         System.out.println(Arrays.toString(wordArray("Hello, nice to meet you!!”")));
 
         System.out.println("\n============TASK3===============\n");
-        System.out.println(removeExtraSpaces("java  is    fun"));
+        System.out.println(removeExtraSpaces("java   ,   is    fun"));
         System.out.println(removeExtraSpaces("Hello,    nice to   meet     you!!"));
         System.out.println("\n============TASK4===============\n");
         System.out.println(count3OrLess("Hi, my name is John Doe"));
@@ -33,12 +33,13 @@ public class Homework08 {
         System.out.println(isDateFormatValid("10/2/1999"));
         System.out.println("\n============TASK6===============\n");
         System.out.println(isEmailFormatValid("abc@gmail"));
-        System.out.println(isEmailFormatValid("abc@gmail.co"));
+        System.out.println(isEmailFormatValid("ab#c@gm.ail.co"));
         System.out.println(isEmailFormatValid("abc@g.co"));
     }
 
     public static int countConsonants(String str) {
-        str = str.replaceAll("[aeiouAEIOU]", "");//removing all vowels from the string
+        str = str.replaceAll("[^a-zA-z]", "");
+        str = str.replaceAll("[aeiouAEIOU1-9]", "");//removing all vowels from the string
         return str.length();
     }
 
@@ -54,7 +55,8 @@ public class Homework08 {
     }
 
     public static String removeExtraSpaces(String str) {
-        return str.replaceAll("\\s+", " ");
+
+        return str.replaceAll("\\s+,", ",").replaceAll("\\s+", " ").trim();
 
     }
 

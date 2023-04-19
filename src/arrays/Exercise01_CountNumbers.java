@@ -1,9 +1,12 @@
 package arrays;
 
+import java.util.Arrays;
+
 public class Exercise01_CountNumbers {
     public static void main(String[] args) {
 
-        int[] numbers = {-1, 3, 0, 5, -7, 10, 8, 0, 10, 0};
+        int[] numbers = {3, 3, 5, 5, 5};
+
 
         //Write a program that counts how many negative numbers you in the array -> 2
 
@@ -31,6 +34,7 @@ public class Exercise01_CountNumbers {
         for (int i = 0; i < numbers.length; i++) {
             if(numbers[i] < 0) negatives++;
         }
+        System.out.println(Arrays.stream(numbers).filter(e -> e !=3 || e != 5).allMatch(value -> value == 3 || value == 6));
 
         System.out.println(negatives); // 2
 
