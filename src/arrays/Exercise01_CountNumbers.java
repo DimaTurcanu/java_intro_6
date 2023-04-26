@@ -27,6 +27,7 @@ public class Exercise01_CountNumbers {
 
         System.out.println(negatives); // 2
 
+        
 
         System.out.println("\n-------for  loop------\n");
         negatives = 0;

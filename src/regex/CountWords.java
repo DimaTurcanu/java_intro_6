@@ -19,5 +19,8 @@ public class CountWords {
         System.out.println("This sentence contains " + counter + " words.");
 
         Pattern pattern1 = Pattern.compile("[a-zA-Z0-9_-]{8,15}");
+        System.out.println(input.matches("\\b\\w+\\b"));
+        
     }
+
 }

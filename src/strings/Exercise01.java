@@ -8,7 +8,7 @@ public class Exercise01 {
         dataType variableName = "value";
          */
 
-        String name = "John";
+        String name = "xJxohxxxnx";
         String address = "Chicago IL 12345";
 
         System.out.println(name); // John
@@ -25,5 +25,7 @@ public class Exercise01 {
         String favMovie = "God Father";
 
         System.out.println("My favorite movie = " + favMovie);
+        if (name.charAt(0) == 'x' && name.charAt(name.length()-1) == 'x')
+            System.out.println(name.substring(1, name.length() - 1).replaceAll("x", ""));
     }
 }
