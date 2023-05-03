@@ -38,7 +38,7 @@ public class Homework10 {
         System.out.println(Arrays.toString(add(new int[]{5, 6, 78, 4, 34, 4}, new int[]{3, 4, 5, 6, 7, 8, 5})));
         System.out.println(Arrays.toString(add(new int[]{5, 6, 78, 4, 34, 4}, new int[]{3, 8, 5})));
         System.out.println("-------------------Task8------------------------");
-        System.out.println(findClosestTo10(new int[]{10, -13, 8, 12, 15, -24}));
+        System.out.println(findClosestTo10(new int[]{10, -13, 12, 15,8, -24}));
 
 
     }
@@ -86,6 +86,7 @@ public class Homework10 {
 }
 
     public static int findClosestTo10(int[] numbers){
+        Arrays.sort(numbers);
         int closest = Integer.MAX_VALUE;
         for (int number : numbers) {
             if (number != 10 && Math.abs(number - 10) < Math.abs(closest - 10)) {
