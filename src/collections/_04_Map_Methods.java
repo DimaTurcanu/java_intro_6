@@ -1,8 +1,10 @@
 package collections;
 
+
 import java.util.*;
 
 public class _04_Map_Methods {
+
     public static void main(String[] args) {
         /*
         Create a map to store the countries with their capitals
@@ -88,5 +90,8 @@ public class _04_Map_Methods {
             System.out.println(entry.getKey());
             System.out.println(entry.getValue());
         }
+
     }
+
 }
+

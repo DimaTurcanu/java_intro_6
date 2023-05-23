@@ -27,6 +27,8 @@ public class Homework07 {
         System.out.println(colors);
 
 
+
+
         System.out.println("\n=-=-=-=-=-=-=-=-=-Task3=-=-=-=-=-=-=-=-=-=-=-\n");
 
         ArrayList<Integer> numbers2 = new ArrayList<>(Arrays.asList(23, -34, -56, 0, 89, 100));

@@ -17,7 +17,15 @@ public class Exercise01 {
                 12
              ab
          */
-
+        int y = 3;  if(y == 0 || y == 1) System.out.println( 1);
+        else {
+            int temp = y;
+            for (int i = 2; i < temp; i++) {
+                y*= i;
+            }
+        }
+        System.out.println(y);
+    }
 
     }
-}
+
