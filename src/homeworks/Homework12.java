@@ -64,9 +64,9 @@ public class Homework12 {
     }
 
     public static int middleInt(int a, int b, int c){
-        int[] nums = {a, b, c};
-        Arrays.sort(nums);
-        return nums[1];
+        int[] numbs = {a, b, c};
+        Arrays.sort(numbs);
+        return numbs[1];
     }
 
     public static int[] no13(int[] arr){
