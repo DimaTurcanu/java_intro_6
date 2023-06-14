@@ -1,5 +1,7 @@
 package homeworks;
 
+import java.util.Arrays;
+
 public class Homework14 {
     public static void main(String[] args) {
         System.out.println("----------------Task1--------------");
@@ -56,21 +58,16 @@ public class Homework14 {
     }
 
         public static int findBiggestNumber(String input) {
-        String[] numbers = input.replaceAll("\\D+", " ").split(" ");
-        int max = 0;
-        for (String number : numbers) {
-            if (!number.isEmpty()) {
-                int currentNumber = Integer.parseInt(number);
-                if (currentNumber > max) max = currentNumber;
-            }
-        }
-        return max;
+        if(input.replaceAll("\\D", "").isEmpty()) return 0;
+        String[] numbers = input.split("\\D");
+            Arrays.sort(numbers);
+
+        return Integer.parseInt( numbers[numbers.length-1]);
     }
 
         public static String countSequenceOfCharacters(String input){
-            if (input.isEmpty()) {
-                return "";
-            }
+            if (input.isEmpty()) return "";
+
 
             StringBuilder result = new StringBuilder();
             int count = 1;
