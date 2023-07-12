@@ -19,7 +19,7 @@ public class Homework17 {
 
     // Task 1
     public static String nthWord(String sentence, int n) {
-        String[] words = sentence.split(" ");
+        String[] words = sentence.split("\\s+");
         if (n <= 0 || n > words.length) {
             return "";
         }
