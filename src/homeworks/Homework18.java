@@ -5,28 +5,25 @@ import java.util.Arrays;
 public class Homework18 {
 
     public static int[] doubleOrTriple(int[] array, boolean doubleValue) {
-        int[] result = new int[array.length];
         int multiplier = doubleValue ? 2 : 3;
         for (int i = 0; i < array.length; i++) {
-            result[i] = array[i] * multiplier;
+            array[i] = array[i] * multiplier;
         }
-        return result;
+        return array;
     }
 
     public static String splitString(String input, int splitBy) {
         int length = input.length();
 
-        // Check if the length of the input string can be divided evenly by the given number
         if (length % splitBy != 0) {
-            return ""; // Return an empty string if it cannot be divided evenly
+            return "";
         }
 
-        int chunkSize = length / splitBy;
+
         StringBuilder result = new StringBuilder();
 
-        // Split the string into chunks of the specified size
-        for (int i = 0; i < length; i += chunkSize) {
-            String chunk = input.substring(i, i + chunkSize);
+        for (int i = 0; i < length; i += splitBy) {
+            String chunk = input.substring(i, i + splitBy);
             result.append(chunk).append(" ");
         }
 
@@ -49,9 +46,8 @@ public class Homework18 {
         int left = 0;
         int right = word.length() - 1;
         while (left < right) {
-            if (word.charAt(left) != word.charAt(right)) {
-                return false;
-            }
+            if (word.charAt(left) != word.charAt(right)) return false;
+
             left++;
             right--;
         }
