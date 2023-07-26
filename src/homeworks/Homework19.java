@@ -5,11 +5,11 @@ import java.util.Arrays;
 public class Homework19 {
 
     // Task-1
-    public static int sum(int[] nums, boolean isEvenIndex) {
+    public static int sum(int[] numbs, boolean isEvenIndex) {
         int sum = 0;
-        for (int i = 0; i < nums.length; i++) {
+        for (int i = 0; i < numbs.length; i++) {
             if ((i % 2 == 0 && isEvenIndex) || (i % 2 != 0 && !isEvenIndex)) {
-                sum += nums[i];
+                sum += numbs[i];
             }
         }
         return sum;
@@ -38,8 +38,10 @@ public class Homework19 {
 
         Arrays.sort(str1Chars);
         Arrays.sort(str2Chars);
-
-        return Arrays.equals(str1Chars, str2Chars);
+        String str3 = Arrays.toString(str2Chars);
+        String str4 = Arrays.toString(str1Chars).substring(str3.length());
+        System.out.println(str4 +"   "+ str3);
+        return str3.equals(str4);
     }
 
     // Task-4
